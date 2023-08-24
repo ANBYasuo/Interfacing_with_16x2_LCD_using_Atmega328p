@@ -32,13 +32,13 @@ int main(void)
 		
 		lcd_cmd(0x0c);	//display on, cursor off
 		_delay_ms(100);
-		
+		//*******************************************//
 		for (uint8_t i =0; i < 4; i++)
 		{
 			lcd_write(' ');
 			_delay_ms(1);
 		}
-	//**********************************//	
+		//*******************************************//
 		lcd_write('M');
 		_delay_ms(100);
 		lcd_write('o');
@@ -53,15 +53,16 @@ int main(void)
 		_delay_ms(100);
 		lcd_write('d');
 		_delay_ms(100);
-		
+		//*******************************************//
 		lcd_cmd(0xc0);  //go to 2nd line
 		_delay_ms(100);
-		
+		//*******************************************//
 		for (uint8_t x=0; x<6; x++)
 		{
 			lcd_write(' ');
 			_delay_ms(1);
 		}
+		
 		lcd_write('2');
 		_delay_ms(100);
 		lcd_write('0');
